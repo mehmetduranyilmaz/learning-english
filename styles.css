@@ -1,0 +1,22 @@
+:root{--bg:#f5f6f8;--yuz:#fff;--yazi:#16181d;--sol:#5d6573;--vurgu:#2447d6;--cizgi:#d9dce3;--dogru:#17803d;--yanlis:#c42b2b;--yakin:#a15c00}
+@media (prefers-color-scheme:dark){:root{--bg:#12141a;--yuz:#1c1f27;--yazi:#eceef3;--sol:#9aa2b1;--vurgu:#8aa2ff;--cizgi:#323847;--dogru:#5fd08a;--yanlis:#ff8585;--yakin:#f0b45a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:17px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:30rem;margin:0 auto;padding:max(1.5rem,env(safe-area-inset-top)) 1.25rem 3rem;display:flex;flex-direction:column;gap:.9rem}
+h1{font-size:1.6rem;margin:.5rem 0 0}
+.alt{color:var(--sol);font-size:.9rem;margin:0}
+button,input{font:inherit}
+button{cursor:pointer;border:1px solid var(--cizgi);background:var(--yuz);color:var(--yazi);border-radius:.6rem;padding:.8rem 1rem;text-align:left}
+.ana{background:var(--vurgu);color:var(--bg);border-color:transparent;text-align:center;font-weight:600}
+.kucuk{padding:.4rem .7rem;font-size:.9rem;display:inline-block;align-self:flex-start}
+.geri{align-self:flex-start;padding:.4rem .7rem;font-size:.9rem}
+.kelime{font-size:2.8rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:1rem 0 .2rem;overflow-wrap:anywhere}
+label{display:flex;flex-direction:column;gap:.25rem;font-size:.9rem;color:var(--sol)}
+input{padding:.7rem .8rem;border:1px solid var(--cizgi);border-radius:.6rem;background:var(--yuz);color:var(--yazi);font-size:1.05rem}
+input:focus-visible,button:focus-visible{outline:2px solid var(--vurgu);outline-offset:2px}
+.s{padding:.5rem .7rem;border-left:4px solid var(--cizgi)}
+.s2{border-color:var(--dogru)}.s1{border-color:var(--yakin)}.s0{border-color:var(--yanlis)}
+.s span{display:block;color:var(--sol)}
+.kart{background:var(--yuz);border:1px solid var(--cizgi);border-radius:1rem;padding:1.5rem;min-height:12rem;cursor:pointer}
+.yedek{display:flex;gap:.6rem;margin-top:1.5rem}
+.yedek label{border:1px solid var(--cizgi);border-radius:.6rem;background:var(--yuz);color:var(--yazi);cursor:pointer}
