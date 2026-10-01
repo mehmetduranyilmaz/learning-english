@@ -6,6 +6,7 @@ const MODLAR = {
   c: { ad: "Dinle → yazılış ve anlam", al: [["en", "Yazılışı"], ["tr", "Türkçe anlamı"]] },
   d: { ad: "Kartlar", al: [] }
 };
+const TUR = { sifat: "sıfat" };
 let K = [], M = "a", S = null, son = null, R = {}, asama = 0, IST = {};
 try { IST = JSON.parse(localStorage.getItem("le-ist") || "{}"); } catch (e) {}
 const kaydet = () => { try { localStorage.setItem("le-ist", JSON.stringify(IST)); } catch (e) {} };
@@ -80,7 +81,7 @@ function ana() {
 function soru() {
   S = sec(); asama = 0; R = {};
   const baslik = M === "a" ? esc(S.en) : M === "b" ? esc(S.tr.join(" / ")) : "Dinle ve yaz";
-  U.innerHTML = `<button class="geri" id="geri">Ana ekran</button><div class="kelime">${baslik}</div>
+  U.innerHTML = `<button class="geri" id="geri">Ana ekran</button><div class="kelime">${baslik}</div><p class="alt">${TUR[S.kategori] || ""}</p>
     <div><button class="kucuk" id="dinle">Dinle</button> <span id="kaynak" class="alt"></span></div>
     ${MODLAR[M].al.map(([a, e]) => `<label>${e}<input data-a="${a}" autocomplete="off" autocapitalize="none" spellcheck="false"></label>`).join("")}
     <div id="sonuc"></div><button class="ana" id="tamam">Kontrol et</button>`;
