@@ -7,6 +7,30 @@ const MODLAR = {
   d: { ad: "Kartlar", al: [] }
 };
 const TUR = { sifat: "sıfat" };
+const IK = {
+  ev: '<path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+  ses: '<path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/>',
+  indir: '<path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/>',
+  yukle: '<path d="M12 15V4m0 0-4 4m4-4 4 4M5 20h14"/>',
+  mik: '<rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+  dur: '<rect x="6" y="6" width="12" height="12" rx="2"/>'
+};
+const ik = n => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IK[n]}</svg>`;
+
+// Ses kaydı ayarları
+const CFG = { repo: "mehmetduranyilmaz/learning-english", branch: "main" };
+const EK = ["webm", "mp4", "mp3"];
+let REC = {};
+const tokenAl = () => { try { return localStorage.getItem("le-token") || ""; } catch (e) { return ""; } };
+const tokenYaz = t => { try { t ? localStorage.setItem("le-token", t) : localStorage.removeItem("le-token"); } catch (e) {} };
+const gh = (yol, opt = {}) => fetch(`https://api.github.com/repos/${CFG.repo}${yol}`, {
+  ...opt, headers: { Accept: "application/vnd.github+json", "Content-Type": "application/json", Authorization: "Bearer " + tokenAl() }
+});
+const b64 = blob => new Promise((ok, hata) => { const f = new FileReader(); f.onload = () => ok(f.result.split(",")[1]); f.onerror = hata; f.readAsDataURL(blob); });
+async function varMi(id) {
+  for (const x of EK) { try { if ((await fetch(`audio/${id}.${x}`, { method: "HEAD", cache: "no-store" })).ok) return x; } catch (e) {} }
+  return "";
+}
 let K = [], M = "a", S = null, son = null, R = {}, asama = 0, IST = {};
 try { IST = JSON.parse(localStorage.getItem("le-ist") || "{}"); } catch (e) {}
 const kaydet = () => { try { localStorage.setItem("le-ist", JSON.stringify(IST)); } catch (e) {} };
@@ -53,7 +77,7 @@ function sec() {
 }
 
 function cal(k) {
-  const el = $("#kaynak"), ek = ["webm", "mp4", "mp3"];
+  const el = $("#kaynak"), ek = EK;
   let i = 0;
   const dene = () => {
     if (i >= ek.length) return robot(k, el);
@@ -72,22 +96,25 @@ function robot(k, el) {
   if (el) el.textContent = "Bilgisayar sesi";
 }
 
+const ust = (b = MODLAR[M].ad, id = "geri") => `<div class="ust"><button class="geri" id="${id}" aria-label="Geri" title="Geri">${ik("ev")}</button><span class="alt">${b}</span></div>`;
+const sesSatir = () => `<div class="ses-satir"><button class="dinle" id="dinle" aria-label="Dinle" title="Dinle">${ik("ses")}</button><span id="kaynak" class="alt"></span></div>`;
+const tur = () => `<span class="tur">${TUR[S.kategori] || ""}</span>`;
+
 function ana() {
   U.innerHTML = `<h1>İngilizce öğreniyorum</h1><p class="alt">${K.length} sıfat. Yanlış yaptıkların daha sık sorulur.</p>` +
     Object.entries(MODLAR).map(([m, v]) => `<button data-m="${m}">${v.ad}</button>`).join("") +
-    `<div class="yedek"><button class="kucuk" id="ind">Yedeği indir</button><label class="kucuk">Yedeği yükle<input type="file" id="yuk" accept=".json" hidden></label></div>`;
+    `<button class="ses-giris" id="kayit-ekrani">${ik("mik")}<span>Ses kaydı (hoca için)</span></button>` +
+    `<div class="yedek"><button class="yedek-btn indir" id="ind">${ik("indir")}<span>Yedeği indir</span></button><label class="yedek-btn yukle">${ik("yukle")}<span>Yedeği yükle</span><input type="file" id="yuk" accept=".json" hidden></label></div>`;
 }
 
 function soru() {
   S = sec(); asama = 0; R = {};
   const baslik = M === "a" ? esc(S.en) : M === "b" ? esc(S.tr.join(" / ")) : "Dinle ve yaz";
-  U.innerHTML = `<button class="geri" id="geri">Ana ekran</button><div class="kelime">${baslik}</div><p class="alt">${TUR[S.kategori] || ""}</p>
-    <div><button class="kucuk" id="dinle">Dinle</button> <span id="kaynak" class="alt"></span></div>
+  U.innerHTML = ust() + `<section class="soru-kart" data-mod="${M}">${tur()}<div class="kelime">${baslik}</div>${sesSatir()}</section>
     ${MODLAR[M].al.map(([a, e]) => `<label>${e}<input data-a="${a}" autocomplete="off" autocapitalize="none" spellcheck="false"></label>`).join("")}
     <div id="sonuc"></div><button class="ana" id="tamam">Kontrol et</button>`;
   if (M === "c") cal(S);
-  else if (M === "a") $("input").focus();
-  if (M !== "a") $("input").focus();
+  $("input").focus();
 }
 
 function goster() {
@@ -110,18 +137,112 @@ function ilerle() {
   }
 }
 
+const kartIc = acik => tur() + `<div class="kelime">${esc(S.en)}</div>` +
+  (acik ? `<p class="okunus">${esc(S.okunus)}</p><p class="anlam">${esc(S.tr.join(" / "))}</p>` : `<p class="alt">Cevap için dokun</p>`) + sesSatir();
+
 function kart() {
   S = sec(); son = S;
-  U.innerHTML = `<button class="geri" id="geri">Ana ekran</button><div class="kart" id="kart"><div class="kelime">${esc(S.en)}</div><p class="alt">Cevap için dokun</p></div>
-    <div><button class="kucuk" id="dinle">Dinle</button> <span id="kaynak" class="alt"></span></div><button class="ana" id="sonraki">Sonraki kart</button>`;
+  U.innerHTML = ust() + `<div class="soru-kart kart" id="kart" data-mod="d">${kartIc(false)}</div><button class="ana" id="sonraki">Sonraki kart</button>`;
+}
+
+function kayitlar() {
+  if (!tokenAl()) return anahtarEkrani();
+  U.innerHTML = ust("Ses kayıtları") + `<p class="alt">Bir kelimeyi seç, okunuşunu kaydet.</p>` +
+    K.map(k => `<div class="satir-kayit"><div><b>${esc(k.en)}</b><span class="alt">${esc(k.okunus)}</span></div><span class="durum yok" id="d-${k.id}">...</span><button class="mikrofon" data-kayit="${k.id}" aria-label="${esc(k.en)} kaydet" title="Kaydet">${ik("mik")}</button></div>`).join("") +
+    `<button class="kucuk" id="anahtar-sil">Anahtarı bu telefondan sil</button>`;
+  K.forEach(k => varMi(k.id).then(x => { const d = $("#d-" + k.id); if (d) { d.textContent = x ? "Kayıt var" : "Kayıt yok"; d.className = "durum " + (x ? "var" : "yok"); } }));
+}
+
+function anahtarEkrani() {
+  U.innerHTML = ust("Ses kayıtları") + `<section class="soru-kart" data-mod="b"><span class="tur">Bir kerelik kurulum</span>
+    <p>Kayıtların depoya gönderilebilmesi için GitHub erişim anahtarı (token) gerekir. Anahtarı bu telefona bir kez yapıştır, sadece bu cihazda saklanır.</p>
+    <label>Erişim anahtarı<input type="password" id="tok" autocomplete="off" autocapitalize="none" spellcheck="false"></label>
+    <div id="tok-durum" class="alt"></div><button class="ana" id="tok-kaydet">Kaydet ve dene</button></section>`;
+}
+
+async function anahtarKaydet() {
+  const t = $("#tok").value.trim(), d = $("#tok-durum");
+  if (!t) { d.textContent = "Önce anahtarı yapıştır."; return; }
+  tokenYaz(t); d.textContent = "Deneniyor...";
+  try {
+    const r = await gh("");
+    if (r.ok) return kayitlar();
+    tokenYaz("");
+    d.textContent = r.status === 401 ? "Anahtar geçersiz veya süresi dolmuş." : `Depoya erişilemedi (kod ${r.status}). Anahtarın bu depo için olduğunu kontrol et.`;
+  } catch (e) { tokenYaz(""); d.textContent = "İnternet bağlantısı yok."; }
+}
+
+function kaydedici(id) {
+  S = K.find(k => k.id === id); REC = {};
+  U.innerHTML = ust("Kayıt", "geri-liste") + `<section class="soru-kart" data-mod="c">${tur()}<div class="kelime">${esc(S.en)}</div><p class="okunus">${esc(S.okunus)}</p><p class="alt">${esc(S.tr.join(" / "))}</p></section>
+    <div class="kayit-alan"><button class="rec" id="rec" aria-label="Kaydı başlat" title="Kaydı başlat">${ik("mik")}</button><p class="alt" id="rec-durum">Kırmızı düğmeye bas, kelimeyi söyle, tekrar bas.</p></div><div id="rec-sonuc"></div>`;
+}
+
+function kayitDurdur() {
+  if (REC.mr && REC.mr.state === "recording") { REC.mr.onstop = null; REC.mr.stop(); }
+  if (REC.stream) REC.stream.getTracks().forEach(t => t.stop());
+  REC = {};
+}
+
+async function kayitToggle() {
+  const b = $("#rec"), d = $("#rec-durum");
+  if (REC.mr && REC.mr.state === "recording") { REC.mr.stop(); return; }
+  if (!navigator.mediaDevices || !window.MediaRecorder) { d.textContent = "Bu tarayıcı ses kaydını desteklemiyor."; return; }
+  try { REC.stream = await navigator.mediaDevices.getUserMedia({ audio: true }); }
+  catch (e) { d.textContent = "Mikrofon izni verilmedi. Tarayıcı ayarlarından izin ver."; return; }
+  const mime = ["audio/mp4", "audio/webm;codecs=opus", "audio/webm"].find(m => MediaRecorder.isTypeSupported(m)) || "";
+  REC.chunks = [];
+  REC.mr = new MediaRecorder(REC.stream, mime ? { mimeType: mime } : {});
+  REC.mr.ondataavailable = e => { if (e.data.size) REC.chunks.push(e.data); };
+  REC.mr.onstop = () => {
+    REC.stream.getTracks().forEach(t => t.stop());
+    const tip = REC.mr.mimeType || mime || "audio/webm";
+    REC.ext = tip.includes("mp4") ? "mp4" : "webm";
+    REC.blob = new Blob(REC.chunks, { type: tip });
+    b.classList.remove("kayitta"); b.innerHTML = ik("mik"); b.title = "Tekrar kaydet";
+    d.textContent = "Dinle, beğenmezsen tekrar kaydet.";
+    $("#rec-sonuc").innerHTML = `<audio controls src="${URL.createObjectURL(REC.blob)}"></audio><button class="ana" id="rec-gonder">Kaydet ve gönder</button><div id="rec-bilgi" class="alt"></div>`;
+  };
+  REC.mr.start();
+  b.classList.add("kayitta"); b.innerHTML = ik("dur"); b.title = "Kaydı bitir";
+  d.textContent = "Kaydediliyor... bitirince tekrar bas.";
+  $("#rec-sonuc").innerHTML = "";
+}
+
+async function gonder() {
+  const bilgi = $("#rec-bilgi"), btn = $("#rec-gonder"), yol = `/contents/audio/${S.id}.${REC.ext}`;
+  btn.disabled = true; bilgi.textContent = "Gönderiliyor...";
+  try {
+    const mevcut = await gh(`${yol}?ref=${CFG.branch}`);
+    const sha = mevcut.ok ? (await mevcut.json()).sha : undefined;
+    const r = await gh(yol, { method: "PUT", body: JSON.stringify({
+      message: `Add pronunciation audio for "${S.en}"\n\nRecorded in the app.`, content: await b64(REC.blob), branch: CFG.branch, sha }) });
+    if (!r.ok) throw r.status;
+    // Aynı kelimenin farklı biçimdeki eski kaydını sil, yoksa eskisi çalar
+    for (const x of EK.filter(x => x !== REC.ext)) {
+      const o = await gh(`/contents/audio/${S.id}.${x}?ref=${CFG.branch}`);
+      if (o.ok) await gh(`/contents/audio/${S.id}.${x}`, { method: "DELETE", body: JSON.stringify({ message: `Remove old audio for "${S.en}"`, sha: (await o.json()).sha, branch: CFG.branch }) });
+    }
+    bilgi.textContent = "Gönderildi. Sitede görünmesi 1-2 dakika sürer.";
+  } catch (e) {
+    btn.disabled = false;
+    bilgi.textContent = [401, 403, 404].includes(e) ? `Gönderilemedi (kod ${e}). Anahtarın yazma izni yok veya süresi dolmuş olabilir.` : typeof e === "number" ? `Gönderilemedi (kod ${e}).` : "Gönderilemedi. İnternet bağlantısını kontrol et.";
+  }
 }
 
 U.onclick = e => {
-  if (e.target.closest("#kart")) { $("#kart").innerHTML = `<div class="kelime">${esc(S.en)}</div><p>${esc(S.okunus)}</p><p>${esc(S.tr.join(" / "))}</p>`; return; }
-  const t = e.target.closest("button"); if (!t) return;
+  const t = e.target.closest("button");
+  if (!t) { if (e.target.closest("#kart")) $("#kart").innerHTML = kartIc(true); return; }
   if (t.dataset.m) { M = t.dataset.m; son = null; M === "d" ? kart() : soru(); }
-  else if (t.id === "geri") ana();
-  else if (t.id === "dinle") cal(S);
+  else if (t.id === "geri") { kayitDurdur(); ana(); }
+  else if (t.id === "geri-liste") { kayitDurdur(); kayitlar(); }
+  else if (t.id === "kayit-ekrani") kayitlar();
+  else if (t.dataset.kayit) kaydedici(t.dataset.kayit);
+  else if (t.id === "rec") kayitToggle();
+  else if (t.id === "rec-gonder") gonder();
+  else if (t.id === "tok-kaydet") anahtarKaydet();
+  else if (t.id === "anahtar-sil") { tokenYaz(""); kayitlar(); }
+  else if (t.id === "dinle") { cal(S); t.classList.add("calar"); setTimeout(() => t.classList.remove("calar"), 900); }
   else if (t.id === "tamam") ilerle();
   else if (t.id === "sonraki") kart();
   else if (t.dataset.say) { R[t.dataset.say] = 2; goster(); }
