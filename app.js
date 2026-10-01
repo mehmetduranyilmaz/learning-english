@@ -138,3 +138,5 @@ U.onchange = e => {
 
 fetch("data/adjectives.json").then(r => { if (!r.ok) throw 0; return r.json(); }).then(v => { K = v; ana(); })
   .catch(() => { U.innerHTML = "<p>Kelime listesi yüklenemedi. Sayfayı GitHub adresinden aç ve data/adjectives.json dosyasının yüklü olduğunu kontrol et.</p>"; });
+
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
