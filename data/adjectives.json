@@ -1,24 +1,2153 @@
 [
-  {"id":"rich","en":"rich","okunus":"riç","tr":["zengin"],"kategori":"sifat"},
-  {"id":"poor","en":"poor","okunus":"puır","tr":["fakir"],"kategori":"sifat"},
-  {"id":"happy","en":"happy","okunus":"hepi","tr":["mutlu"],"kategori":"sifat"},
-  {"id":"sad","en":"sad","okunus":"sed","tr":["üzgün"],"kategori":"sifat"},
-  {"id":"angry","en":"angry","okunus":"engri","tr":["kızgın"],"kategori":"sifat"},
-  {"id":"tired","en":"tired","okunus":"tayırd","tr":["yorgun"],"kategori":"sifat"},
-  {"id":"hungry","en":"hungry","okunus":"hangri","tr":["aç"],"kategori":"sifat"},
-  {"id":"thirsty","en":"thirsty","okunus":"törsti","tr":["susamış"],"kategori":"sifat"},
-  {"id":"busy","en":"busy","okunus":"bizi","tr":["meşgul"],"kategori":"sifat"},
-  {"id":"free","en":"free","okunus":"frii","tr":["boş","müsait"],"kategori":"sifat"},
-  {"id":"easy","en":"easy","okunus":"iizi","tr":["kolay"],"kategori":"sifat"},
-  {"id":"low","en":"low","okunus":"lou","tr":["alçak","düşük"],"kategori":"sifat"},
-  {"id":"full","en":"full","okunus":"ful","tr":["dolu"],"kategori":"sifat"},
-  {"id":"empty","en":"empty","okunus":"empti","tr":["boş"],"kategori":"sifat"},
-  {"id":"open","en":"open","okunus":"oupin","tr":["açık"],"kategori":"sifat"},
-  {"id":"closed","en":"closed","okunus":"klozd","tr":["kapalı"],"kategori":"sifat"},
-  {"id":"new","en":"new","okunus":"nuu","tr":["yeni"],"kategori":"sifat"},
-  {"id":"modern","en":"modern","okunus":"madörn","tr":["modern"],"kategori":"sifat"},
-  {"id":"traditional","en":"traditional","okunus":"trıdişınıl","tr":["geleneksel"],"kategori":"sifat"},
-  {"id":"public","en":"public","okunus":"pablik","tr":["kamuya açık"],"kategori":"sifat"},
-  {"id":"private","en":"private","okunus":"prayvıt","tr":["özel"],"kategori":"sifat"},
-  {"id":"local","en":"local","okunus":"loukıl","tr":["yerel"],"kategori":"sifat"}
+  {
+    "id": "rich",
+    "en": "rich",
+    "okunus": "riç",
+    "tr": [
+      "zengin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "poor",
+    "en": "poor",
+    "okunus": "puır",
+    "tr": [
+      "fakir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "happy",
+    "en": "happy",
+    "okunus": "hepi",
+    "tr": [
+      "mutlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "sad",
+    "en": "sad",
+    "okunus": "sed",
+    "tr": [
+      "üzgün"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "angry",
+    "en": "angry",
+    "okunus": "engri",
+    "tr": [
+      "kızgın"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "tired",
+    "en": "tired",
+    "okunus": "tayırd",
+    "tr": [
+      "yorgun"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "hungry",
+    "en": "hungry",
+    "okunus": "hangri",
+    "tr": [
+      "aç"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "thirsty",
+    "en": "thirsty",
+    "okunus": "törsti",
+    "tr": [
+      "susamış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "busy",
+    "en": "busy",
+    "okunus": "bizi",
+    "tr": [
+      "meşgul"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "free",
+    "en": "free",
+    "okunus": "frii",
+    "tr": [
+      "boş",
+      "müsait"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "easy",
+    "en": "easy",
+    "okunus": "iizi",
+    "tr": [
+      "kolay"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "low",
+    "en": "low",
+    "okunus": "lou",
+    "tr": [
+      "alçak",
+      "düşük"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "full",
+    "en": "full",
+    "okunus": "ful",
+    "tr": [
+      "dolu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "empty",
+    "en": "empty",
+    "okunus": "empti",
+    "tr": [
+      "boş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "open",
+    "en": "open",
+    "okunus": "oupin",
+    "tr": [
+      "açık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "closed",
+    "en": "closed",
+    "okunus": "klozd",
+    "tr": [
+      "kapalı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "new",
+    "en": "new",
+    "okunus": "nuu",
+    "tr": [
+      "yeni"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "modern",
+    "en": "modern",
+    "okunus": "madörn",
+    "tr": [
+      "modern"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "traditional",
+    "en": "traditional",
+    "okunus": "trıdişınıl",
+    "tr": [
+      "geleneksel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "public",
+    "en": "public",
+    "okunus": "pablik",
+    "tr": [
+      "kamuya açık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "private",
+    "en": "private",
+    "okunus": "prayvıt",
+    "tr": [
+      "özel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "local",
+    "en": "local",
+    "okunus": "loukıl",
+    "tr": [
+      "yerel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "near",
+    "en": "near",
+    "okunus": "nir",
+    "tr": [
+      "yakın"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "far",
+    "en": "far",
+    "okunus": "far",
+    "tr": [
+      "uzak"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "fat",
+    "en": "fat",
+    "okunus": "fet",
+    "tr": [
+      "şişman"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "thin",
+    "en": "thin",
+    "okunus": "thin",
+    "tr": [
+      "zayıf",
+      "ince"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "strong",
+    "en": "strong",
+    "okunus": "strong",
+    "tr": [
+      "güçlü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "weak",
+    "en": "weak",
+    "okunus": "wiik",
+    "tr": [
+      "zayıf",
+      "güçsüz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "tall",
+    "en": "tall",
+    "okunus": "tol",
+    "tr": [
+      "uzun boylu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "short",
+    "en": "short",
+    "okunus": "şort",
+    "tr": [
+      "kısa boylu",
+      "kısa"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "long",
+    "en": "long",
+    "okunus": "long",
+    "tr": [
+      "uzun"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "heavy",
+    "en": "heavy",
+    "okunus": "hevi",
+    "tr": [
+      "ağır"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "light",
+    "en": "light",
+    "okunus": "layt",
+    "tr": [
+      "hafif"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "thick",
+    "en": "thick",
+    "okunus": "thik",
+    "tr": [
+      "kalın"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "wide",
+    "en": "wide",
+    "okunus": "wayd",
+    "tr": [
+      "geniş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "narrow",
+    "en": "narrow",
+    "okunus": "nerou",
+    "tr": [
+      "dar"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "deep",
+    "en": "deep",
+    "okunus": "diip",
+    "tr": [
+      "derin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "shallow",
+    "en": "shallow",
+    "okunus": "şelou",
+    "tr": [
+      "sığ"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "high",
+    "en": "high",
+    "okunus": "hay",
+    "tr": [
+      "yüksek"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "global",
+    "en": "global",
+    "okunus": "gloubıl",
+    "tr": [
+      "küresel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "personal",
+    "en": "personal",
+    "okunus": "pörsınıl",
+    "tr": [
+      "kişisel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "professional",
+    "en": "professional",
+    "okunus": "prıfeşınıl",
+    "tr": [
+      "profesyonel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "popular",
+    "en": "popular",
+    "okunus": "papyulır",
+    "tr": [
+      "popüler"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "common",
+    "en": "common",
+    "okunus": "kamın",
+    "tr": [
+      "yaygın"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "rare",
+    "en": "rare",
+    "okunus": "rer",
+    "tr": [
+      "nadir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "normal",
+    "en": "normal",
+    "okunus": "normıl",
+    "tr": [
+      "normal"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "strange",
+    "en": "strange",
+    "okunus": "streyndj",
+    "tr": [
+      "tuhaf"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "special",
+    "en": "special",
+    "okunus": "speşıl",
+    "tr": [
+      "özel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "different",
+    "en": "different",
+    "okunus": "difırınt",
+    "tr": [
+      "farklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "similar",
+    "en": "similar",
+    "okunus": "similır",
+    "tr": [
+      "benzer"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "possible",
+    "en": "possible",
+    "okunus": "pasıbıl",
+    "tr": [
+      "mümkün"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "impossible",
+    "en": "impossible",
+    "okunus": "imposıbıl",
+    "tr": [
+      "imkânsız"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "necessary",
+    "en": "necessary",
+    "okunus": "nesıseri",
+    "tr": [
+      "gerekli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unnecessary",
+    "en": "unnecessary",
+    "okunus": "anneseseri",
+    "tr": [
+      "gereksiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "safe",
+    "en": "safe",
+    "okunus": "seyf",
+    "tr": [
+      "güvenli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dangerous",
+    "en": "dangerous",
+    "okunus": "deyncırıs",
+    "tr": [
+      "tehlikeli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "healthy",
+    "en": "healthy",
+    "okunus": "helthi",
+    "tr": [
+      "sağlıklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "sick",
+    "en": "sick",
+    "okunus": "sik",
+    "tr": [
+      "hasta"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "alive",
+    "en": "alive",
+    "okunus": "ılayv",
+    "tr": [
+      "canlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dead",
+    "en": "dead",
+    "okunus": "ded",
+    "tr": [
+      "ölü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "young",
+    "en": "young",
+    "okunus": "yang",
+    "tr": [
+      "genç"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "elderly",
+    "en": "elderly",
+    "okunus": "eldırli",
+    "tr": [
+      "yaşlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "married",
+    "en": "married",
+    "okunus": "merid",
+    "tr": [
+      "evli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "single",
+    "en": "single",
+    "okunus": "singıl",
+    "tr": [
+      "bekâr"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "scalable",
+    "en": "scalable",
+    "okunus": "skeylıbıl",
+    "tr": [
+      "ölçeklenebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "maintainable",
+    "en": "maintainable",
+    "okunus": "meynteynıbıl",
+    "tr": [
+      "bakımı kolay",
+      "sürdürülebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "readable",
+    "en": "readable",
+    "okunus": "riidıbıl",
+    "tr": [
+      "okunabilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "reusable",
+    "en": "reusable",
+    "okunus": "riyuzıbıl",
+    "tr": [
+      "yeniden kullanılabilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "testable",
+    "en": "testable",
+    "okunus": "testıbıl",
+    "tr": [
+      "test edilebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "extensible",
+    "en": "extensible",
+    "okunus": "ikstensıbıl",
+    "tr": [
+      "genişletilebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "configurable",
+    "en": "configurable",
+    "okunus": "kınfigyurıbıl",
+    "tr": [
+      "yapılandırılabilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "customizable",
+    "en": "customizable",
+    "okunus": "kastımayzıbıl",
+    "tr": [
+      "özelleştirilebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "compatible",
+    "en": "compatible",
+    "okunus": "kımpetıbıl",
+    "tr": [
+      "uyumlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "incompatible",
+    "en": "incompatible",
+    "okunus": "inkımpetıbıl",
+    "tr": [
+      "uyumsuz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "efficient",
+    "en": "efficient",
+    "okunus": "ifişınt",
+    "tr": [
+      "verimli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "inefficient",
+    "en": "inefficient",
+    "okunus": "inifişınt",
+    "tr": [
+      "verimsiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "responsive",
+    "en": "responsive",
+    "okunus": "rispansiv",
+    "tr": [
+      "yanıt veren",
+      "duyarlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "asynchronous",
+    "en": "asynchronous",
+    "okunus": "eysingkronıs",
+    "tr": [
+      "asenkron"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "synchronous",
+    "en": "synchronous",
+    "okunus": "singkronıs",
+    "tr": [
+      "senkron"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dynamic",
+    "en": "dynamic",
+    "okunus": "daynemik",
+    "tr": [
+      "dinamik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "static",
+    "en": "static",
+    "okunus": "stetik",
+    "tr": [
+      "statik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "abstract",
+    "en": "abstract",
+    "okunus": "ebstrekt",
+    "tr": [
+      "soyut"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "concrete",
+    "en": "concrete",
+    "okunus": "kankriit",
+    "tr": [
+      "somut"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "generic",
+    "en": "generic",
+    "okunus": "cınerik",
+    "tr": [
+      "jenerik",
+      "genel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "specific",
+    "en": "specific",
+    "okunus": "spısifik",
+    "tr": [
+      "belirli",
+      "özel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "optional",
+    "en": "optional",
+    "okunus": "apşınıl",
+    "tr": [
+      "isteğe bağlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "required",
+    "en": "required",
+    "okunus": "rikwırd",
+    "tr": [
+      "gerekli",
+      "zorunlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "mandatory",
+    "en": "mandatory",
+    "okunus": "mendıtori",
+    "tr": [
+      "zorunlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "valid",
+    "en": "valid",
+    "okunus": "velid",
+    "tr": [
+      "geçerli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "invalid",
+    "en": "invalid",
+    "okunus": "invelid",
+    "tr": [
+      "geçersiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "atomic",
+    "en": "atomic",
+    "okunus": "ıtamik",
+    "tr": [
+      "atomik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "concurrent",
+    "en": "concurrent",
+    "okunus": "kınkörınt",
+    "tr": [
+      "eşzamanlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "distributed",
+    "en": "distributed",
+    "okunus": "distribyutıd",
+    "tr": [
+      "dağıtık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "centralized",
+    "en": "centralized",
+    "okunus": "sentrılayzd",
+    "tr": [
+      "merkezi"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "secure",
+    "en": "secure",
+    "okunus": "sikyur",
+    "tr": [
+      "güvenli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "vulnerable",
+    "en": "vulnerable",
+    "okunus": "valnırıbıl",
+    "tr": [
+      "zafiyete açık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "robust",
+    "en": "robust",
+    "okunus": "roubast",
+    "tr": [
+      "sağlam",
+      "dayanıklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "fault-tolerant",
+    "en": "fault-tolerant",
+    "okunus": "folt-tolırınt",
+    "tr": [
+      "hata toleranslı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "stateless",
+    "en": "stateless",
+    "okunus": "steytlıs",
+    "tr": [
+      "durumsuz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "stateful",
+    "en": "stateful",
+    "okunus": "steytfıl",
+    "tr": [
+      "durum bilgili"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "close",
+    "en": "close",
+    "okunus": "kloz",
+    "tr": [
+      "yakın"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "distant",
+    "en": "distant",
+    "okunus": "distınt",
+    "tr": [
+      "uzak"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "clean",
+    "en": "clean",
+    "okunus": "kliin",
+    "tr": [
+      "temiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "rough",
+    "en": "rough",
+    "okunus": "raf",
+    "tr": [
+      "pürüzlü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "smooth",
+    "en": "smooth",
+    "okunus": "smuudh",
+    "tr": [
+      "pürüzsüz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "hard",
+    "en": "hard",
+    "okunus": "hard",
+    "tr": [
+      "sert"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "soft",
+    "en": "soft",
+    "okunus": "soft",
+    "tr": [
+      "yumuşak"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "sharp",
+    "en": "sharp",
+    "okunus": "şarp",
+    "tr": [
+      "keskin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "bright",
+    "en": "bright",
+    "okunus": "brayt",
+    "tr": [
+      "parlak"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dark",
+    "en": "dark",
+    "okunus": "dark",
+    "tr": [
+      "koyu",
+      "karanlık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "loud",
+    "en": "loud",
+    "okunus": "laud",
+    "tr": [
+      "yüksek sesli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "quiet",
+    "en": "quiet",
+    "okunus": "kwayıt",
+    "tr": [
+      "sessiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "noisy",
+    "en": "noisy",
+    "okunus": "noyzi",
+    "tr": [
+      "gürültülü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "crowded",
+    "en": "crowded",
+    "okunus": "kraudıd",
+    "tr": [
+      "kalabalık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "alone",
+    "en": "alone",
+    "okunus": "ıloun",
+    "tr": [
+      "yalnız"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "together",
+    "en": "together",
+    "okunus": "tıgedır",
+    "tr": [
+      "birlikte"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "early",
+    "en": "early",
+    "okunus": "örli",
+    "tr": [
+      "erken"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "late",
+    "en": "late",
+    "okunus": "leyt",
+    "tr": [
+      "geç"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "quick",
+    "en": "quick",
+    "okunus": "kwik",
+    "tr": [
+      "çabuk"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "slowly",
+    "en": "slowly",
+    "okunus": "slouli",
+    "tr": [
+      "yavaşça"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "polite",
+    "en": "polite",
+    "okunus": "pılayt",
+    "tr": [
+      "kibar"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "rude",
+    "en": "rude",
+    "okunus": "ruud",
+    "tr": [
+      "kaba"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "kind",
+    "en": "kind",
+    "okunus": "kaynd",
+    "tr": [
+      "nazik",
+      "iyi kalpli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "mean",
+    "en": "mean",
+    "okunus": "miin",
+    "tr": [
+      "kötü",
+      "kaba"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "honest",
+    "en": "honest",
+    "okunus": "anıst",
+    "tr": [
+      "dürüst"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dishonest",
+    "en": "dishonest",
+    "okunus": "disanıst",
+    "tr": [
+      "dürüst olmayan"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "brave",
+    "en": "brave",
+    "okunus": "breyv",
+    "tr": [
+      "cesur"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "afraid",
+    "en": "afraid",
+    "okunus": "ıfreyd",
+    "tr": [
+      "korkmuş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "careful",
+    "en": "careful",
+    "okunus": "kerfıl",
+    "tr": [
+      "dikkatli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "careless",
+    "en": "careless",
+    "okunus": "kerlıs",
+    "tr": [
+      "dikkatsiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "lucky",
+    "en": "lucky",
+    "okunus": "laki",
+    "tr": [
+      "şanslı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unlucky",
+    "en": "unlucky",
+    "okunus": "anlaki",
+    "tr": [
+      "şanssız"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "famous",
+    "en": "famous",
+    "okunus": "feymıs",
+    "tr": [
+      "ünlü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unknown",
+    "en": "unknown",
+    "okunus": "announ",
+    "tr": [
+      "bilinmeyen"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "serious",
+    "en": "serious",
+    "okunus": "siriyıs",
+    "tr": [
+      "ciddi"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "funny",
+    "en": "funny",
+    "okunus": "fani",
+    "tr": [
+      "eğlenceli",
+      "komik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "patient",
+    "en": "patient",
+    "okunus": "peyşınt",
+    "tr": [
+      "sabırlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "impatient",
+    "en": "impatient",
+    "okunus": "impeyşınt",
+    "tr": [
+      "sabırsız"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "difficult",
+    "en": "difficult",
+    "okunus": "difikılt",
+    "tr": [
+      "zor"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "beautiful",
+    "en": "beautiful",
+    "okunus": "biyutıfıl",
+    "tr": [
+      "güzel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "ugly",
+    "en": "ugly",
+    "okunus": "agli",
+    "tr": [
+      "çirkin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "big",
+    "en": "big",
+    "okunus": "big",
+    "tr": [
+      "büyük"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "small",
+    "en": "small",
+    "okunus": "smol",
+    "tr": [
+      "küçük"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "old",
+    "en": "old",
+    "okunus": "ould",
+    "tr": [
+      "yaşlı",
+      "eski"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "fast",
+    "en": "fast",
+    "okunus": "fest",
+    "tr": [
+      "hızlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "slow",
+    "en": "slow",
+    "okunus": "slou",
+    "tr": [
+      "yavaş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "expensive",
+    "en": "expensive",
+    "okunus": "ikspensiv",
+    "tr": [
+      "pahalı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "cheap",
+    "en": "cheap",
+    "okunus": "çiip",
+    "tr": [
+      "ucuz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "dirty",
+    "en": "dirty",
+    "okunus": "dörti",
+    "tr": [
+      "kirli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "hot",
+    "en": "hot",
+    "okunus": "hat",
+    "tr": [
+      "sıcak"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "cold",
+    "en": "cold",
+    "okunus": "kould",
+    "tr": [
+      "soğuk"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "good",
+    "en": "good",
+    "okunus": "gud",
+    "tr": [
+      "iyi"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "bad",
+    "en": "bad",
+    "okunus": "bed",
+    "tr": [
+      "kötü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "important",
+    "en": "important",
+    "okunus": "importınt",
+    "tr": [
+      "önemli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "ready",
+    "en": "ready",
+    "okunus": "redi",
+    "tr": [
+      "hazır"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "calm",
+    "en": "calm",
+    "okunus": "kaam",
+    "tr": [
+      "sakin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "nervous",
+    "en": "nervous",
+    "okunus": "nörvıs",
+    "tr": [
+      "gergin",
+      "heyecanlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "friendly",
+    "en": "friendly",
+    "okunus": "frendli",
+    "tr": [
+      "arkadaş canlısı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unfriendly",
+    "en": "unfriendly",
+    "okunus": "anfrendli",
+    "tr": [
+      "soğuk",
+      "arkadaşça olmayan"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "generous",
+    "en": "generous",
+    "okunus": "cenırıs",
+    "tr": [
+      "cömert"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "selfish",
+    "en": "selfish",
+    "okunus": "selfiş",
+    "tr": [
+      "bencil"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "lazy",
+    "en": "lazy",
+    "okunus": "leyzi",
+    "tr": [
+      "tembel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "active",
+    "en": "active",
+    "okunus": "ektiv",
+    "tr": [
+      "aktif"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "creative",
+    "en": "creative",
+    "okunus": "kri-eytiv",
+    "tr": [
+      "yaratıcı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "curious",
+    "en": "curious",
+    "okunus": "kyuriyıs",
+    "tr": [
+      "meraklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "confident",
+    "en": "confident",
+    "okunus": "kanfıdınt",
+    "tr": [
+      "kendinden emin"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "shy",
+    "en": "shy",
+    "okunus": "şay",
+    "tr": [
+      "utangaç"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "proud",
+    "en": "proud",
+    "okunus": "praud",
+    "tr": [
+      "gururlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "worried",
+    "en": "worried",
+    "okunus": "vörid",
+    "tr": [
+      "endişeli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "excited",
+    "en": "excited",
+    "okunus": "iksaytıd",
+    "tr": [
+      "heyecanlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "bored",
+    "en": "bored",
+    "okunus": "bord",
+    "tr": [
+      "sıkılmış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "smart",
+    "en": "smart",
+    "okunus": "smart",
+    "tr": [
+      "zeki",
+      "akıllı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "clever",
+    "en": "clever",
+    "okunus": "klevır",
+    "tr": [
+      "zeki",
+      "becerikli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "simple",
+    "en": "simple",
+    "okunus": "simpıl",
+    "tr": [
+      "basit"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "complex",
+    "en": "complex",
+    "okunus": "kompleks",
+    "tr": [
+      "karmaşık"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "useful",
+    "en": "useful",
+    "okunus": "yuusfıl",
+    "tr": [
+      "kullanışlı",
+      "faydalı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "useless",
+    "en": "useless",
+    "okunus": "yuuslıs",
+    "tr": [
+      "işe yaramaz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "stable",
+    "en": "stable",
+    "okunus": "steybıl",
+    "tr": [
+      "kararlı",
+      "stabil"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unstable",
+    "en": "unstable",
+    "okunus": "ansteybıl",
+    "tr": [
+      "kararsız",
+      "stabil olmayan"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "reliable",
+    "en": "reliable",
+    "okunus": "rilayıbıl",
+    "tr": [
+      "güvenilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "flexible",
+    "en": "flexible",
+    "okunus": "fleksıbıl",
+    "tr": [
+      "esnek"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "powerful",
+    "en": "powerful",
+    "okunus": "pavırfıl",
+    "tr": [
+      "güçlü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "available",
+    "en": "available",
+    "okunus": "ıveylıbıl",
+    "tr": [
+      "mevcut",
+      "kullanılabilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "broken",
+    "en": "broken",
+    "okunus": "broukın",
+    "tr": [
+      "bozuk"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "correct",
+    "en": "correct",
+    "okunus": "kırekt",
+    "tr": [
+      "doğru"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "wrong",
+    "en": "wrong",
+    "okunus": "rong",
+    "tr": [
+      "yanlış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "modular",
+    "en": "modular",
+    "okunus": "modyulır",
+    "tr": [
+      "modüler"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "monolithic",
+    "en": "monolithic",
+    "okunus": "monolitik",
+    "tr": [
+      "monolitik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "event-driven",
+    "en": "event-driven",
+    "okunus": "ivent-drivın",
+    "tr": [
+      "olay güdümlü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "object-oriented",
+    "en": "object-oriented",
+    "okunus": "objekt-oriyentıd",
+    "tr": [
+      "nesne yönelimli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "functional",
+    "en": "functional",
+    "okunus": "fankşınıl",
+    "tr": [
+      "fonksiyonel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "imperative",
+    "en": "imperative",
+    "okunus": "impırıtiv",
+    "tr": [
+      "emredici",
+      "imperatif"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "declarative",
+    "en": "declarative",
+    "okunus": "diklerıtiv",
+    "tr": [
+      "bildirimsel",
+      "deklaratif"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "typed",
+    "en": "typed",
+    "okunus": "taypt",
+    "tr": [
+      "tipli"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "untyped",
+    "en": "untyped",
+    "okunus": "an-taypt",
+    "tr": [
+      "tipsiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "immutable",
+    "en": "immutable",
+    "okunus": "imyutıbıl",
+    "tr": [
+      "değiştirilemez"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "mutable",
+    "en": "mutable",
+    "okunus": "myutıbıl",
+    "tr": [
+      "değiştirilebilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "persistent",
+    "en": "persistent",
+    "okunus": "pırsistınt",
+    "tr": [
+      "kalıcı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "temporary",
+    "en": "temporary",
+    "okunus": "tempıreri",
+    "tr": [
+      "geçici"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "sensitive",
+    "en": "sensitive",
+    "okunus": "sensıtiv",
+    "tr": [
+      "hassas"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "encrypted",
+    "en": "encrypted",
+    "okunus": "inkriptıd",
+    "tr": [
+      "şifrelenmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "decrypted",
+    "en": "decrypted",
+    "okunus": "dikriptıd",
+    "tr": [
+      "şifresi çözülmüş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "authenticated",
+    "en": "authenticated",
+    "okunus": "othentıkeytıd",
+    "tr": [
+      "kimliği doğrulanmış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "authorized",
+    "en": "authorized",
+    "okunus": "othırayzd",
+    "tr": [
+      "yetkilendirilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "unauthorized",
+    "en": "unauthorized",
+    "okunus": "an-othırayzd",
+    "tr": [
+      "yetkisiz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "idempotent",
+    "en": "idempotent",
+    "okunus": "aydımpoutınt",
+    "tr": [
+      "idempotent"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "transactional",
+    "en": "transactional",
+    "okunus": "trenzekşınıl",
+    "tr": [
+      "işlemsel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "normalized",
+    "en": "normalized",
+    "okunus": "normılayzd",
+    "tr": [
+      "normalize edilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "denormalized",
+    "en": "denormalized",
+    "okunus": "dinormılayzd",
+    "tr": [
+      "denormalize edilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "relational",
+    "en": "relational",
+    "okunus": "rıleyşınıl",
+    "tr": [
+      "ilişkisel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "non-relational",
+    "en": "non-relational",
+    "okunus": "nan-rıleyşınıl",
+    "tr": [
+      "ilişkisel olmayan"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "indexed",
+    "en": "indexed",
+    "okunus": "indekst",
+    "tr": [
+      "indekslenmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "cached",
+    "en": "cached",
+    "okunus": "keşt",
+    "tr": [
+      "önbelleğe alınmış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "real-time",
+    "en": "real-time",
+    "okunus": "riıl-taym",
+    "tr": [
+      "gerçek zamanlı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "parallel",
+    "en": "parallel",
+    "okunus": "perılel",
+    "tr": [
+      "paralel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "sequential",
+    "en": "sequential",
+    "okunus": "sikwenshıl",
+    "tr": [
+      "sıralı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "deterministic",
+    "en": "deterministic",
+    "okunus": "ditörmınıstik",
+    "tr": [
+      "deterministik"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "non-deterministic",
+    "en": "non-deterministic",
+    "okunus": "nan-ditörmınıstik",
+    "tr": [
+      "deterministik olmayan"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "backward-compatible",
+    "en": "backward-compatible",
+    "okunus": "bekvırd-kımpetıbıl",
+    "tr": [
+      "geriye uyumlu"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "cross-platform",
+    "en": "cross-platform",
+    "okunus": "kros-pletform",
+    "tr": [
+      "platformlar arası"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "portable",
+    "en": "portable",
+    "okunus": "portıbıl",
+    "tr": [
+      "taşınabilir"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "embedded",
+    "en": "embedded",
+    "okunus": "embedıd",
+    "tr": [
+      "gömülü"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "serverless",
+    "en": "serverless",
+    "okunus": "sörvırles",
+    "tr": [
+      "sunucusuz"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "containerized",
+    "en": "containerized",
+    "okunus": "kıntınerayzd",
+    "tr": [
+      "konteynerleştirilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "orchestrated",
+    "en": "orchestrated",
+    "okunus": "orkıstreytıd",
+    "tr": [
+      "orkestre edilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "automated",
+    "en": "automated",
+    "okunus": "otımeytıd",
+    "tr": [
+      "otomatikleştirilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "manual",
+    "en": "manual",
+    "okunus": "menyuıl",
+    "tr": [
+      "manuel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "production-ready",
+    "en": "production-ready",
+    "okunus": "prıdakşın-redi",
+    "tr": [
+      "üretime hazır"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "deprecated",
+    "en": "deprecated",
+    "okunus": "deprıkeytıd",
+    "tr": [
+      "kullanımdan kaldırılmış"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "legacy",
+    "en": "legacy",
+    "okunus": "legısi",
+    "tr": [
+      "eski",
+      "miras"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "experimental",
+    "en": "experimental",
+    "okunus": "ikspırımentıl",
+    "tr": [
+      "deneysel"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "beta",
+    "en": "beta",
+    "okunus": "beytı",
+    "tr": [
+      "beta"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "open-source",
+    "en": "open-source",
+    "okunus": "oupın-sors",
+    "tr": [
+      "açık kaynaklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "closed-source",
+    "en": "closed-source",
+    "okunus": "klozd-sors",
+    "tr": [
+      "kapalı kaynaklı"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "versioned",
+    "en": "versioned",
+    "okunus": "vörjınd",
+    "tr": [
+      "sürümlendirilmiş"
+    ],
+    "kategori": "sifat"
+  },
+  {
+    "id": "optimized",
+    "en": "optimized",
+    "okunus": "aptımayzd",
+    "tr": [
+      "optimize edilmiş"
+    ],
+    "kategori": "sifat"
+  }
 ]
