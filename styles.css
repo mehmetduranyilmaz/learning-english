@@ -20,3 +20,43 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--vurgu);outline-
 .kart{background:var(--yuz);border:1px solid var(--cizgi);border-radius:1rem;padding:1.5rem;min-height:12rem;cursor:pointer}
 .yedek{display:flex;gap:.6rem;margin-top:1.5rem}
 .yedek label{border:1px solid var(--cizgi);border-radius:.6rem;background:var(--yuz);color:var(--yazi);cursor:pointer}
+
+/* Interactive buttons and inputs */
+button{transition:background-color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .15s ease;-webkit-tap-highlight-color:transparent}
+button:active{transform:scale(.97);box-shadow:none}
+button:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.14)}
+@media (hover:hover){button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.14)}}
+
+[data-m]{--k:#2447d6;border-left:6px solid var(--k);font-weight:600;background:color-mix(in srgb,var(--k) 6%,var(--yuz))}
+[data-m="b"]{--k:#7c3aed}
+[data-m="c"]{--k:#0d9488}
+[data-m="d"]{--k:#d97706}
+@media (prefers-color-scheme:dark){[data-m]{--k:#8aa2ff}[data-m="b"]{--k:#b794f6}[data-m="c"]{--k:#4fd1c5}[data-m="d"]{--k:#f6ad55}}
+[data-m]:focus-visible,[data-m]:active{background:color-mix(in srgb,var(--k) 18%,var(--yuz));border-color:var(--k)}
+@media (hover:hover){[data-m]:hover{background:color-mix(in srgb,var(--k) 18%,var(--yuz));border-color:var(--k)}}
+
+.ana:focus-visible,.ana:active{filter:brightness(1.12)}
+@media (hover:hover){.ana:hover{filter:brightness(1.12)}}
+.kucuk:focus-visible,.geri:focus-visible,.yedek label:focus-within{border-color:var(--vurgu);background:color-mix(in srgb,var(--vurgu) 12%,var(--yuz))}
+@media (hover:hover){.kucuk:hover,.geri:hover,.yedek label:hover{border-color:var(--vurgu);background:color-mix(in srgb,var(--vurgu) 12%,var(--yuz))}}
+
+input{transition:border-color .2s ease,box-shadow .2s ease,background-color .2s ease}
+input:focus{outline:none;border-color:var(--vurgu);box-shadow:0 0 0 4px color-mix(in srgb,var(--vurgu) 25%,transparent)}
+input:disabled{opacity:.7}
+label{transition:color .2s ease}
+label:focus-within{color:var(--vurgu)}
+
+.kart{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.kart:active{transform:scale(.98)}
+@media (hover:hover){.kart:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.14);border-color:var(--vurgu)}}
+
+/* Feedback */
+.s{animation:giris .25s ease both}
+.s2{background:color-mix(in srgb,var(--dogru) 12%,transparent)}
+.s1{background:color-mix(in srgb,var(--yakin) 12%,transparent)}
+.s0{background:color-mix(in srgb,var(--yanlis) 12%,transparent);animation:giris .25s ease both,salla .35s ease .1s}
+.kelime{animation:belir .3s ease both}
+@keyframes giris{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes belir{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+@keyframes salla{25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
